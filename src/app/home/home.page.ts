@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { videos } from '../../assets/data';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  public movies = videos;
   constructor() {}
-
 }

@@ -1,20 +1,66 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Movies with API TheMovieDB
+      <img src="../../assets/icon/ieg.png" height="20" alt="" />
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col
+        size="12"
+        size-md="6"
+        size-lg="4"
+        size-xl="3"
+        *ngFor="let fils of movies.results"
+      >
+        <ion-card>
+          <img src="https://image.tmdb.org/t/p/w500/{{fils.poster_path }}" />
+          <ion-card-header>
+            <ion-card-title>{{ fils.title }}</ion-card-title>
+            <ion-card-subtitle>👤 {{fils.popularity}}</ion-card-subtitle>
+            <p>{{ fils.vote_average }} ⭐️</p>
+          </ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+          <ion-card-content> {{fils.overview}} </ion-card-content>
+          <ion-button style="padding: 10px; text-transform: none"
+            ><a
+              href="https://iegcodestore.my.id"
+              style="color: #fff; text-decoration: none"
+              >Tonton Sekarang ▶️</a
+            ></ion-button
+          >
+          <br /><br />
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+<br /><br />
+<br />
+
+<footer class="py-16 text-center text-sm text-black dark:text-white/70">
+  made with ❤️ by
+  <a href="http://ibrahimelgibran.com">iegcode :')</a>
+  <style>
+    footer {
+      background-color: #fff;
+      color: black;
+      text-align: center;
+      font-size: 17px;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768spx) {
+      footer {
+        margin-left: 0; /* Reset margin-left */
+      }
+    }
+  </style>
+</footer>
