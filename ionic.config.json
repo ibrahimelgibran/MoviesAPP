@@ -1,0 +1,7 @@
+{
+  "name": "aplikasiMovies",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
